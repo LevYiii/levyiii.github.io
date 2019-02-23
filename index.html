@@ -364,8 +364,8 @@
         
           
             <hr>
-<p>title: GitHub+Hexo 搭建个人网站（一）<br>date: 2019-02-20 18:31:56</p>
-<h2 id="tags-Hexo-网页"><a href="#tags-Hexo-网页" class="headerlink" title="tags:Hexo 网页"></a>tags:Hexo 网页</h2><h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>第一次接触个人技术博客是在本科专业学习的时候，寻求问题解决方案然后找到了CSND个人博客。后来也发现了越来越多同类型的技术博客，在专业问题的解决过程中，这些博客起到了很大的作用，于是我也想创建一个属于自己的博客，由此便催生出了这篇文章。文章记录了我从零开始搭建博客的全过程，技术不少来源于网络大牛，此文只是整理总结</p>
+<p>title:  GitHub+Hexo 搭建个人网站（一）<br>date:  2019-02-20 18:31:56</p>
+<h2 id="tags-Hexo-网页"><a href="#tags-Hexo-网页" class="headerlink" title="tags: Hexo 网页"></a>tags: Hexo 网页</h2><h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>第一次接触个人技术博客是在本科专业学习的时候，寻求问题解决方案然后找到了CSND个人博客。后来也发现了越来越多同类型的技术博客，在专业问题的解决过程中，这些博客起到了很大的作用，于是我也想创建一个属于自己的博客，由此便催生出了这篇文章。文章记录了我从零开始搭建博客的全过程，技术不少来源于网络大牛，此文只是整理总结</p>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
 <li>获取个人域名</li>
 <li>注册GitHub账号</li>
@@ -394,11 +394,11 @@
 <p><img src="http://pnbqhjj43.bkt.clouddn.com/GIT%E3%80%82bash.png" alt></p>
 <ul>
 <li><p>输入以下命令即可绑定：</p>
-<p>  <strong>git config –global user.name “GitHub用户名”</strong></p>
-<p>  <strong>git config –global user.email “GitHub注册邮箱”</strong></p>
+<p> git config –global user.name “GitHub用户名”</p>
+<p> git config –global user.email “GitHub注册邮箱”</p>
 </li>
 <li><p>生成ssh秘钥：</p>
-<pre><code>**ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;**
+<pre><code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;
 </code></pre></li>
 <li><p>复制生成的.ssh的文件夹中的id_rsa.pub密钥</p>
 </li>
@@ -407,18 +407,20 @@
 <p><img src="http://pnbqhjj43.bkt.clouddn.com/%E9%85%8D%E7%BD%AESSH.png" alt></p>
 <ul>
 <li>标题任意填写，正文中把刚刚复制的id_rsa.pub内容粘贴进去，然后新建即可</li>
-<li>测试GitHub公钥设置是否成功：<br><strong>ssh <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></strong></li>
+<li><p>测试GitHub公钥设置是否成功：</p>
+<p> ssh <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
+</li>
 </ul>
 <h3 id="1-3-2安装Node-js"><a href="#1-3-2安装Node-js" class="headerlink" title="1.3.2安装Node.js"></a>1.3.2安装Node.js</h3><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">点击下载Node.js</a></p>
 <ul>
 <li><p>安装后，检测Node.js是否安装成功，命令行中输入：</p>
-<p>   <strong>node -v :</strong></p>
+<p> <strong>node -v :</strong></p>
 </li>
 </ul>
 <p><img src="http://pnbqhjj43.bkt.clouddn.com/%E6%A3%80%E6%B5%8Bnode%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt></p>
 <ul>
 <li><p>测试npm是否安装成功，命令行中输入：</p>
-<p>   <strong>npm -v :</strong></p>
+<p> <strong>npm -v :</strong></p>
 </li>
 </ul>
 <p><img src="http://pnbqhjj43.bkt.clouddn.com/%E6%A3%80%E6%B5%8Bnpm%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90.png" alt></p>
@@ -455,15 +457,13 @@
 <p>这个操作其实就是让hexo知道你要把blog部署在哪个位置，很显然，部署在GitHub的仓库里</p>
 <ul>
 <li><p>安装Git部署插件，输入命令：</p>
-<pre><code>**npm install hexo-deployer-git --save**
+<pre><code>npm install hexo-deployer-git --save
 </code></pre></li>
 <li><p>分别输入以下三条命令：</p>
-<pre><code>**hexo clean** 
-
-**hexo g** 
-
-**hexo d**  
-</code></pre></li>
+<p> hexo clean</p>
+<p> hexo g </p>
+<p> hexo d  </p>
+</li>
 </ul>
 <p>此时，在浏览器中输入<em>用户名.github.io</em>即可访问到网站了，到这里说明网站发布成功，但是网站域名不及麻烦并且固定，后面我们将绑定自己注册的域名，从而能够在网络上输入个性域名访问到网站。</p>
 
