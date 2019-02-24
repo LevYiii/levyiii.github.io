@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo nodes.js github,">
+  <meta name="keywords" content="hexo github nodes.js,">
 
 
 
@@ -79,25 +79,30 @@
 
 
 
-<meta name="description" content="前言在前一章中我们的网站已经可以在网络上搜索到了，但是网址是GitHub提供的固定格式：用户名.github.io 如果以后每次进入个人网站都输入此地址，很显然是很麻烦的。何不尝试将此域名与自己注册的个性域名绑定在一起呢，这样在浏览器中输入自己的个性域名，就能找到个人网站了。因为本人是通过阿里云购买注册域名，因此在本文中都是以阿里云平台为例">
-<meta name="keywords" content="hexo nodes.js github">
+<meta name="description" content="前言上一章我们已经成功绑定了个性域名，使得我们能够通过浏览器输入自己的域名从而访问到个人网站。并且在此基础上我们还可以根据个人喜好选择合适的网站主题。现在个人网站已经成型，更重要的内容部分就需要我们自己来编辑并发布到网站上，这一章的主要内容就是如何编辑文章并上传到网站上">
+<meta name="keywords" content="hexo github nodes.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github+Hexo搭建个人网站（二）">
-<meta property="og:url" content="http://yoursite.com/2019/02/24/Github+Hexo搭建个人网站（二）/index.html">
+<meta property="og:title" content="Github+Hexo搭建个人网站（三）">
+<meta property="og:url" content="http://yoursite.com/2019/02/24/Github-Hexo搭建个人网站（三）/index.html">
 <meta property="og:site_name" content="少不更事">
-<meta property="og:description" content="前言在前一章中我们的网站已经可以在网络上搜索到了，但是网址是GitHub提供的固定格式：用户名.github.io 如果以后每次进入个人网站都输入此地址，很显然是很麻烦的。何不尝试将此域名与自己注册的个性域名绑定在一起呢，这样在浏览器中输入自己的个性域名，就能找到个人网站了。因为本人是通过阿里云购买注册域名，因此在本文中都是以阿里云平台为例">
+<meta property="og:description" content="前言上一章我们已经成功绑定了个性域名，使得我们能够通过浏览器输入自己的域名从而访问到个人网站。并且在此基础上我们还可以根据个人喜好选择合适的网站主题。现在个人网站已经成型，更重要的内容部分就需要我们自己来编辑并发布到网站上，这一章的主要内容就是如何编辑文章并上传到网站上">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8C%E4%BA%91.png">
-<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D.png">
-<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E8%BE%93%E5%85%A5%E8%A6%81%E7%BB%91%E5%AE%9A%E7%9A%84%E5%9F%9F%E5%90%8D.png">
-<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E7%BD%91%E9%A1%B5%E9%A2%84%E8%A7%88.png">
-<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98.png">
-<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E4%B8%BB%E9%A2%98next.png">
-<meta property="og:updated_time" content="2019-02-24T07:16:31.561Z">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/markdown%E7%BC%96%E8%BE%91.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E9%A2%98.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E9%A2%98%E6%BC%94%E7%A4%BA%E6%95%88%E6%9E%9C.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%E6%BC%94%E7%A4%BA.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E5%BC%95%E7%94%A8.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E5%BC%95%E7%94%A8%E6%BC%94%E7%A4%BA.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E5%B5%8C%E5%A5%97.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E5%B5%8C%E5%A5%97%E6%BC%94%E7%A4%BA.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E8%AE%B0.png">
+<meta property="og:image" content="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E6%9C%BA%E6%BC%94%E7%A4%BA.png">
+<meta property="og:updated_time" content="2019-02-24T14:28:42.324Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github+Hexo搭建个人网站（二）">
-<meta name="twitter:description" content="前言在前一章中我们的网站已经可以在网络上搜索到了，但是网址是GitHub提供的固定格式：用户名.github.io 如果以后每次进入个人网站都输入此地址，很显然是很麻烦的。何不尝试将此域名与自己注册的个性域名绑定在一起呢，这样在浏览器中输入自己的个性域名，就能找到个人网站了。因为本人是通过阿里云购买注册域名，因此在本文中都是以阿里云平台为例">
-<meta name="twitter:image" content="http://pnbqhjj43.bkt.clouddn.com/%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8C%E4%BA%91.png">
+<meta name="twitter:title" content="Github+Hexo搭建个人网站（三）">
+<meta name="twitter:description" content="前言上一章我们已经成功绑定了个性域名，使得我们能够通过浏览器输入自己的域名从而访问到个人网站。并且在此基础上我们还可以根据个人喜好选择合适的网站主题。现在个人网站已经成型，更重要的内容部分就需要我们自己来编辑并发布到网站上，这一章的主要内容就是如何编辑文章并上传到网站上">
+<meta name="twitter:image" content="http://pnbqhjj43.bkt.clouddn.com/markdown%E7%BC%96%E8%BE%91.png">
 
 
 
@@ -127,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/24/Github+Hexo搭建个人网站（二）/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/24/Github-Hexo搭建个人网站（三）/">
 
 
 
 
 
-  <title>Github+Hexo搭建个人网站（二） | 少不更事</title>
+  <title>Github+Hexo搭建个人网站（三） | 少不更事</title>
   
 
 
@@ -290,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/Github+Hexo搭建个人网站（二）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/24/Github-Hexo搭建个人网站（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘義伟">
@@ -307,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Github+Hexo搭建个人网站（二）</h1>
+          <h1 class="post-title" itemprop="name headline">Github+Hexo搭建个人网站（三）</h1>
         
 
         <div class="post-meta">
@@ -319,7 +324,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T13:46:24+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-24T20:34:15+08:00">
                 2019-02-24
               </time>
             
@@ -338,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/24/Github+Hexo搭建个人网站（二）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/24/Github+Hexo搭建个人网站（二）/" itemprop="commentCount"></span>
+                <a href="/2019/02/24/Github-Hexo搭建个人网站（三）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/02/24/Github-Hexo搭建个人网站（三）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -367,40 +372,53 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一章中我们的网站已经可以在网络上搜索到了，但是网址是GitHub提供的固定格式：<strong>用户名.github.io</strong> 如果以后每次进入个人网站都输入此地址，很显然是很麻烦的。何不尝试将此域名与自己注册的个性域名绑定在一起呢，这样在浏览器中输入自己的个性域名，就能找到个人网站了。因为本人是通过<a href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云</a>购买注册域名，因此在本文中都是以阿里云平台为例<br>  <a id="more"></a></p>
-<h1 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h1><h2 id="登录阿里云-gt-控制台-gt-域名服务"><a href="#登录阿里云-gt-控制台-gt-域名服务" class="headerlink" title="登录阿里云-&gt;控制台-&gt;域名服务"></a>登录阿里云-&gt;控制台-&gt;域名服务</h2><p><img src="http://pnbqhjj43.bkt.clouddn.com/%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8C%E4%BA%91.png" alt></p>
-<h2 id="找到要绑定的域名，进入解析"><a href="#找到要绑定的域名，进入解析" class="headerlink" title="找到要绑定的域名，进入解析"></a>找到要绑定的域名，进入解析</h2><p><img src="http://pnbqhjj43.bkt.clouddn.com/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D.png" alt><br>添加如下三条解析：</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>上一章我们已经成功绑定了个性域名，使得我们能够通过浏览器输入自己的域名从而访问到个人网站。并且在此基础上我们还可以根据个人喜好选择合适的网站主题。现在个人网站已经成型，更重要的内容部分就需要我们自己来编辑并发布到网站上，这一章的主要内容就是如何编辑文章并上传到网站上<br><a id="more"></a></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><ul>
+<li><p><strong>Markdow</strong>编辑器<br>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown语法简洁明了、容易掌握，而且功能比纯文本更强，因此写博客使用它，可以让用户更加专注的写文章，而不需要费尽心力的考虑样式，相对于html已经算是轻量级语言，像有道云笔记也支持Markdown写作。并且Markdown完全兼容html，也就是可以在文章里直接插入html代码。本人使用的Markdown编辑器是<a href="http://www.markdownpad.com/" target="_blank" rel="noopener">MarkdownPad</a>和<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">作业部落</a>。Markdown编辑语法十分简单，详细教程请<a href="http://www.markdown.cn/" target="_blank" rel="noopener">点击这里</a></p>
+</li>
+<li><p>寻找合适的图床<br>当文章中要插入图片时，如果只是少量图片，可以直接把图片存放在source文件夹中，很显然这样做的坏处是为图片会占据大量的存储的空间，加载的时候相对缓慢 ，这时考虑把文章里的图片上传到某一网站，然后获得外部链接，使用Markdown语法</p>
 <blockquote>
-<p>记录类型：<strong>CNAME</strong><br>   主机记录：<strong>www</strong><br>   记录值：<strong>用户名.github.io</strong></p>
+<p>! [图片信息] (外部链接)</p>
 </blockquote>
+<p>完成图片的插入，这种网站就被成为图床。</p>
+</li>
+</ul>
+<h1 id="开始编辑文章"><a href="#开始编辑文章" class="headerlink" title="开始编辑文章"></a>开始编辑文章</h1><ul>
+<li>在blog目录下打开命令行输入以下命令：</li>
+</ul>
 <blockquote>
-<p>记录类型：<strong>A</strong><br>   主机记录：<strong>@</strong><br>   记录值：<strong>192.30.252.153</strong></p>
+<p>hexo new “test”</p>
 </blockquote>
-<blockquote>
-<p>记录类型：<strong>A</strong><br>   主机记录：<strong>@</strong><br>   记录值：<strong>192.30.252.154</strong></p>
-</blockquote>
-<h2 id="登录GitHub-gt-进入仓库-gt-设置-gt-在Custom-domain栏中输入绑定的域名后保存"><a href="#登录GitHub-gt-进入仓库-gt-设置-gt-在Custom-domain栏中输入绑定的域名后保存" class="headerlink" title="登录GitHub-&gt;进入仓库-&gt;设置-&gt;在Custom domain栏中输入绑定的域名后保存"></a>登录GitHub-&gt;进入仓库-&gt;设置-&gt;在<strong>Custom domain</strong>栏中输入绑定的域名后保存</h2><p><img src="http://pnbqhjj43.bkt.clouddn.com/%E8%BE%93%E5%85%A5%E8%A6%81%E7%BB%91%E5%AE%9A%E7%9A%84%E5%9F%9F%E5%90%8D.png" alt></p>
-<h2 id="进入本地blog-source目录-gt-创建记事本文件并在内容中输入域名-gt-保存为所有文件类型"><a href="#进入本地blog-source目录-gt-创建记事本文件并在内容中输入域名-gt-保存为所有文件类型" class="headerlink" title="进入本地blog/source目录-&gt;创建记事本文件并在内容中输入域名-&gt;保存为所有文件类型"></a>进入本地blog/source目录-&gt;创建记事本文件并在内容中输入域名-&gt;保存为<strong>所有文件类型</strong></h2><h2 id="在blog目录下打开命令行，输入如下命令："><a href="#在blog目录下打开命令行，输入如下命令：" class="headerlink" title="在blog目录下打开命令行，输入如下命令："></a>在blog目录下打开命令行，输入如下命令：</h2><blockquote>
-<p>hexo clean</p>
-</blockquote>
-<blockquote>
-<p>hexo g</p>
-</blockquote>
-<blockquote>
-<p>hexo d </p>
-</blockquote>
-<p>  此时打开浏览器输入域名就能访问到个人网站<br><img src="http://pnbqhjj43.bkt.clouddn.com/%E7%BD%91%E9%A1%B5%E9%A2%84%E8%A7%88.png" alt><br> (本人的网页做出过修改，不是默认页面)<br>  到这里为止，个人网站可以算是正式上线，如果不喜欢默认主题，可以修改主题–<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题传送门</a></p>
-<h1 id="更改主题"><a href="#更改主题" class="headerlink" title="更改主题"></a>更改主题</h1><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题传送门</a><br>以Next主题为例</p>
-<h2 id="在blog目录中打开命令行输入："><a href="#在blog目录中打开命令行输入：" class="headerlink" title="在blog目录中打开命令行输入："></a>在blog目录中打开命令行输入：</h2><blockquote>
-<p>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
-</blockquote>
-<p>  这条将Next主题下载到blog目录的themes主题下的next文件夹中</p>
-<h2 id="打开站点配置文件-config-yml，如下图修改主题为Next"><a href="#打开站点配置文件-config-yml，如下图修改主题为Next" class="headerlink" title="打开站点配置文件_config.yml，如下图修改主题为Next"></a>打开<strong>站点配置文件</strong>_config.yml，如下图修改主题为Next</h2><p><img src="http://pnbqhjj43.bkt.clouddn.com/%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98.png" alt></p>
-<h2 id="打开主题配置文件-config-yml，找到Scheme-Settings-next主题的三个样式，依个人喜好选择样式（去除-号即可）"><a href="#打开主题配置文件-config-yml，找到Scheme-Settings-next主题的三个样式，依个人喜好选择样式（去除-号即可）" class="headerlink" title="打开主题配置文件_config.yml，找到Scheme Settings,next主题的三个样式，依个人喜好选择样式（去除#号即可）"></a>打开<strong>主题配置文件</strong>_config.yml，找到<em>Scheme Settings</em>,next主题的三个样式，依个人喜好选择样式（去除#号即可）</h2><p><img src="http://pnbqhjj43.bkt.clouddn.com/%E4%B8%BB%E9%A2%98next.png" alt></p>
-<h2 id="重新部署网站"><a href="#重新部署网站" class="headerlink" title="重新部署网站"></a>重新部署网站</h2><blockquote>
+<p> 此时在blog/source/_post目录下能看到新   生成的 <strong>test.md</strong>文件,用markdown编辑   器打开，如图</p>
+<p> <img src="http://pnbqhjj43.bkt.clouddn.com/markdown%E7%BC%96%E8%BE%91.png" alt></p>
+<ul>
+<li><p>在编辑框里编辑文档<br>在这里简单说明<strong>Markdown编辑语法</strong></p>
+<ul>
+<li><p><strong>标题语法：</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E9%A2%98.png" alt><br><strong>演示效果：</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E9%A2%98%E6%BC%94%E7%A4%BA%E6%95%88%E6%9E%9C.png" alt></p>
+</li>
+<li><p><strong>分级标题:</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98.png" alt><br><strong>演示效果</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%E6%BC%94%E7%A4%BA.png" alt></p>
+</li>
+<li><p><strong>引用</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E5%BC%95%E7%94%A8.png" alt><br><strong>演示效果</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E5%BC%95%E7%94%A8%E6%BC%94%E7%A4%BA.png" alt></p>
+</li>
+<li><p><strong>序号嵌套</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E5%B5%8C%E5%A5%97.png" alt><br><strong>演示效果</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E5%B5%8C%E5%A5%97%E6%BC%94%E7%A4%BA.png" alt></p>
+<ul>
+<li><strong>标记</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E8%AE%B0.png" alt><br><strong>演示效果</strong><br><img src="http://pnbqhjj43.bkt.clouddn.com/%E6%A0%87%E6%9C%BA%E6%BC%94%E7%A4%BA.png" alt></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p> <strong>使用这几个基础语义语法能够完成大部分文章编辑，更详细语法参见上面给出的链接</strong></p>
+<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><ul>
+<li>在blog目录下打开命令行输入：<blockquote>
 <p>hexo g<br>hexo d</p>
 </blockquote>
-<h2 id="打开浏览器输入域名查看效果"><a href="#打开浏览器输入域名查看效果" class="headerlink" title="打开浏览器输入域名查看效果"></a>打开浏览器输入域名查看效果</h2><p>##小结##<br>  到这里位置，个人网站已经搭建完成。除了搭建网站外，更重要的是如何充实网站内容。下一篇将会记录发布文章全过程</p>
+</li>
+</ul>
+<ul>
+<li>浏览器中输入域名查看个人网站</li>
+</ul>
+<p><strong>小结</strong><br>  到此为止，我们从零开始搭建个人网站项目到上传网站内容已经全部完成。本次项目也到此结束，下一章将会是总结在这个项目过程中遇到的问题及解决方案</p>
 
       
     </div>
@@ -447,7 +465,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo-nodes-js-github/" rel="tag"># hexo nodes.js github</a>
+            <a href="/tags/hexo-github-nodes-js/" rel="tag"># hexo github nodes.js</a>
           
         </div>
       
@@ -460,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/20/hexo+GitHub搭建个人博客（一）/" rel="next" title="GitHub+Hexo 搭建个人网站（一）">
-                <i class="fa fa-chevron-left"></i> GitHub+Hexo 搭建个人网站（一）
+              <a href="/2019/02/24/Github+Hexo搭建个人网站（二）/" rel="next" title="Github+Hexo搭建个人网站（二）">
+                <i class="fa fa-chevron-left"></i> Github+Hexo搭建个人网站（二）
               </a>
             
           </div>
@@ -469,10 +487,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/24/Github-Hexo搭建个人网站（三）/" rel="prev" title="Github+Hexo搭建个人网站（三）">
-                Github+Hexo搭建个人网站（三） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -635,7 +649,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定域名"><span class="nav-number">2.</span> <span class="nav-text">绑定域名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#登录阿里云-gt-控制台-gt-域名服务"><span class="nav-number">2.1.</span> <span class="nav-text">登录阿里云-&gt;控制台-&gt;域名服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#找到要绑定的域名，进入解析"><span class="nav-number">2.2.</span> <span class="nav-text">找到要绑定的域名，进入解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登录GitHub-gt-进入仓库-gt-设置-gt-在Custom-domain栏中输入绑定的域名后保存"><span class="nav-number">2.3.</span> <span class="nav-text">登录GitHub-&gt;进入仓库-&gt;设置-&gt;在Custom domain栏中输入绑定的域名后保存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入本地blog-source目录-gt-创建记事本文件并在内容中输入域名-gt-保存为所有文件类型"><span class="nav-number">2.4.</span> <span class="nav-text">进入本地blog/source目录-&gt;创建记事本文件并在内容中输入域名-&gt;保存为所有文件类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在blog目录下打开命令行，输入如下命令："><span class="nav-number">2.5.</span> <span class="nav-text">在blog目录下打开命令行，输入如下命令：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#更改主题"><span class="nav-number">3.</span> <span class="nav-text">更改主题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在blog目录中打开命令行输入："><span class="nav-number">3.1.</span> <span class="nav-text">在blog目录中打开命令行输入：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开站点配置文件-config-yml，如下图修改主题为Next"><span class="nav-number">3.2.</span> <span class="nav-text">打开站点配置文件_config.yml，如下图修改主题为Next</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开主题配置文件-config-yml，找到Scheme-Settings-next主题的三个样式，依个人喜好选择样式（去除-号即可）"><span class="nav-number">3.3.</span> <span class="nav-text">打开主题配置文件_config.yml，找到Scheme Settings,next主题的三个样式，依个人喜好选择样式（去除#号即可）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重新部署网站"><span class="nav-number">3.4.</span> <span class="nav-text">重新部署网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开浏览器输入域名查看效果"><span class="nav-number">3.5.</span> <span class="nav-text">打开浏览器输入域名查看效果</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始编辑文章"><span class="nav-number">3.</span> <span class="nav-text">开始编辑文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发布文章"><span class="nav-number">4.</span> <span class="nav-text">发布文章</span></a></li></ol></div>
             
 
           </div>
@@ -839,9 +853,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2019/02/24/Github+Hexo搭建个人网站（二）/';
-          this.page.identifier = '2019/02/24/Github+Hexo搭建个人网站（二）/';
-          this.page.title = 'Github+Hexo搭建个人网站（二）';
+          this.page.url = 'http://yoursite.com/2019/02/24/Github-Hexo搭建个人网站（三）/';
+          this.page.identifier = '2019/02/24/Github-Hexo搭建个人网站（三）/';
+          this.page.title = 'Github+Hexo搭建个人网站（三）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://Lev.disqus.com/embed.js';
